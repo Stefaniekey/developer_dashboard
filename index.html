@@ -93,7 +93,7 @@ canvas{max-height:280px}
 .detail-table td:first-child{color:#64748b;font-weight:600;width:180px}
 
 /* ============================================================
-   ✅ BARU: Panel Ringkasan dengan Filter Tanggal
+   ✅ Panel Ringkasan dengan Filter Tanggal
    ============================================================ */
 .summary-panel{
   background:linear-gradient(135deg,#ffffff 0%,#f8faff 100%);
@@ -491,7 +491,7 @@ function guruView(u){
     return {kelas:k,l:arr.filter(s=>s.jk==='Laki-laki').length,p:arr.filter(s=>s.jk==='Perempuan').length,total:arr.length};
   });
 
-  // Ringkasan panel — ditaruh di paling atas
+  // Ringkasan panel 
   const summaryHTML = buildSummaryPanel(ss, logs, dates, F.tgl);
 
   const html=`
