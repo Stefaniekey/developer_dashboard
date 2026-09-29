@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dashboard Siswa</title>
+<title>SmartClass</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
@@ -349,7 +349,7 @@ function render(){
     if(h[1]&&h[1]!==u.ref){body=denied('#/siswa')}
     else{const s=D.siswa.find(x=>x.id===u.ref);body=s?detail(s,null):denied('#/siswa')}
   }
-  app.innerHTML=`<header><h1>🎓 Dashboard Siswa <span class="badge">${u.role==='guru'?'Guru':'Siswa'}</span></h1>
+  app.innerHTML=`<header><h1>🎓 SmartClass <span class="badge">${u.role==='guru'?'Guru':'Siswa'}</span></h1>
   <div><span style="margin-right:14px">👤 ${esc(u.nama)}</span><button class="out" onclick="logout()">Logout</button></div></header><main>${body.html||body}</main>`;
   if(body.after)body.after();
 }
@@ -357,7 +357,7 @@ function denied(back){return `<div class="card" style="text-align:center;padding
 
 function loginView(){
   app.innerHTML=`<div class="login"><div class="lbox">
-    <h2>🎓 Dashboard Siswa</h2>
+    <h2>🎓 SmartClass</h2>
     <p>Silakan login untuk melanjutkan</p>
     <input id="u" placeholder="Username" autofocus>
     <div class="pwd-wrap">
